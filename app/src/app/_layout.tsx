@@ -1,12 +1,13 @@
-import { View, Text, StatusBar } from 'react-native'
-import React from 'react'
+
+import React from 'react';
 import { Colors } from '@/utils/Constants'
 import { Stack } from 'expo-router'
+import { StatusBar } from 'expo-status-bar'
 
 const Root = () => {
     return (
         <>
-            <StatusBar barStyle={"light-content"} backgroundColor={Colors.tertiary} />
+            <StatusBar style='light' backgroundColor={Colors.tertiary} translucent={false} />
             <Stack initialRouteName='index' screenOptions={{ headerShown: false }}>
                 <Stack.Screen name='index' />
             </Stack>
@@ -14,4 +15,4 @@ const Root = () => {
     )
 }
 
-export default Root
+export default Root 
